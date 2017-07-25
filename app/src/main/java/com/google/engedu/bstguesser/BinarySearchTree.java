@@ -52,13 +52,13 @@ public class BinarySearchTree {
     private TreeNode search(int value) {
 
         TreeNode current = root;
-        while(current != null){
+        while(current!= null || current != null){
             if(current.getValue() == value){
                 return current;
             }else if(current.getValue() < value){
-                current = current.left;
-            }else if(current.getValue() > value){
                 current = current.right;
+            }else if(current.getValue() > value){
+                current = current.left;
             }
 
         }
